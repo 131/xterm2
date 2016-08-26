@@ -1,11 +1,10 @@
 {
   "source": {
     "include": [
-      "src/xterm.js",
-      "addons/attach/attach.js",
-      "addons/fit/fit.js",
-      "addons/fullscreen/fullscreen.js",
-      "addons/linkify/linkify.js"
+      "lib/terminal.js",
+      "addons/attach/index.js",
+      "addons/fit/index.js",
+      "addons/linkify/index.js"
     ]
   },
   "opts": {

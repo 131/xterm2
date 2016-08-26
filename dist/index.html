@@ -3,6 +3,10 @@
     <head>
         <title>xterm2 demo</title>
         <link rel="stylesheet" href="xterm.css" />
+
+        <script src="xterm2.js">;</script>
+        <script src="addons/fit.js">;</script>
+
     </head>
     <body>
         <h1>xterm2: xterm, in the browser</h1>
@@ -10,22 +14,11 @@
         <div>
           <h2>Options</h2>
           <label><input type="checkbox" id="option-cursor-blink"> cursorBlink</label>
-          <div>
-          	<h3>Size</h3>
-            <div>
-              <div style="display: inline-block; margin-right: 16px;">
-                <label for="cols">Columns</label>
-                <input type="number" id="cols" />
-              </div>
-              <div style="display: inline-block; margin-right: 16px;">
-                <label for="rows">Rows</label>
-                <input type="number" id="rows" />
-              </div>
-            </div>
-          </div>
+          <label for="cols">Columns <input type="number" id="cols" /></label>
+          <label for="rows">Rows <input type="number" id="rows" /></label>
         </div>
-        <p><strong>Attention:</strong> The demo is a barebones implementation and is designed for xterm2 evaluation purposes only. Exposing the demo to the public as is would introduce security risks for the host.</p>
-        <script src="_main.js" defer ></script>
+
+        <script src="main.js" defer ></script>
     </body>
 
         <style>
@@ -34,7 +27,11 @@ body {
     font-size: 1em;
     color: #111;
 }
-
+label {
+  background-color:#eaeaea;
+  margin:3px;
+  padding:5px;
+}
 h1 {
     text-align: center;
 }

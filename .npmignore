@@ -2,3 +2,5 @@
 /docs/
 /npm-debug.log
 /demo/_main.js
+/test/
+/jsdoc.json

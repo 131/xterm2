@@ -1,15 +1,11 @@
 {
-  "name": "xterm",
-  "version": "1.1.3",
-  "ignore": [
-    "demo",
-    "test",
-    ".gitignore"
-  ],
-  "main": "src/xterm.js",
-  "repository": "https://github.com/sourcelair/xterm.js",
+  "name": "xterm2",
+  "version": "1.0.0",
+  "main": "lib/terminal.js",
+  "repository": "https://github.com/131/xterm2",
   "license": "MIT",
   "devDependencies": {
+    "browserify": "^13.1.0",
     "chai": "3.5.0",
     "docdash": "0.4.0",
     "express": "4.13.4",
@@ -21,8 +17,16 @@
     "sleep": "^3.0.1"
   },
   "scripts": {
-    "start": "node demo/app",
-    "test": "mocha --recursive",
-    "build:docs": "node_modules/.bin/jsdoc -c jsdoc.json"
+    "build:docs": "jsdoc -c jsdoc.json",
+
+    "build": "npm run build:dist:main && npm run build:dist:addons:fit && npm run build:dist:addons:attach",
+
+    "build:dist:main": "browserify lib/terminal.js -t [ babelify --no-compact --presets [ es2015 ] ] --standalone Terminal > dist/xterm2.js",
+    "build:dist:addons:fit": "browserify addons/fit/index.js --standalone Terminal_Fit > dist/addons/fit.js",
+    "build:dist:addons:attach": "browserify addons/attach/index.js --standalone Terminal_Attach > dist/addons/attach.js",
+
+    "build:demo": "browserify demo/main.js > demo/_main.js",
+    "demo": "npm run build:demo && node demo/app",
+    "test": "mocha -b --recursive"
   }
 }
