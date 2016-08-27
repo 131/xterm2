@@ -9,12 +9,15 @@ It enables applications to provide fully featured terminals to their users and c
 - xterm.js is a fork of [Christopher Jeffrey term.js](https://github.com/chjj/term.js/)
 - Christopher Jeffrey term.js is a fork from [Fabrice Bellard's javascript vt100 for jslinux](http://bellard.org/jslinux/).
 
+**xterm2 is usable as a drop-in replacement of xterm, is all situation (client side, browserify, electron/nw.js) as it provides the same surface API & signatures.**
+
 
 ## Differences with main project
 * lighweight
 * ES6 based
 * UMD module design
 * **sane API**
+* no 'build' system, this is just a library for your application to use
 
 
 ## Installation / usage

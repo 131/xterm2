@@ -1,9 +1,12 @@
 {
   "name": "xterm2",
   "version": "1.0.0",
-  "main": "lib/terminal.js",
+  "main": "lib/terminal-fn.js",
+  "browser": "lib/terminal.js",
+
   "repository": "https://github.com/131/xterm2",
   "license": "MIT",
+  
   "devDependencies": {
     "browserify": "^13.1.0",
     "chai": "3.5.0",
