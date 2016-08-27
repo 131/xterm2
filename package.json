@@ -1,12 +1,10 @@
 {
   "name": "xterm2",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "lib/terminal-fn.js",
   "browser": "lib/terminal.js",
-
   "repository": "https://github.com/131/xterm2",
   "license": "MIT",
-  
   "devDependencies": {
     "browserify": "^13.1.0",
     "chai": "3.5.0",
@@ -21,13 +19,10 @@
   },
   "scripts": {
     "build:docs": "jsdoc -c jsdoc.json",
-
     "build": "npm run build:dist:main && npm run build:dist:addons:fit && npm run build:dist:addons:attach",
-
     "build:dist:main": "browserify lib/terminal.js -t [ babelify --no-compact --presets [ es2015 ] ] --standalone Terminal > dist/xterm2.js",
     "build:dist:addons:fit": "browserify addons/fit/index.js --standalone Terminal_Fit > dist/addons/fit.js",
     "build:dist:addons:attach": "browserify addons/attach/index.js --standalone Terminal_Attach > dist/addons/attach.js",
-
     "build:demo": "browserify demo/main.js > demo/_main.js",
     "demo": "npm run build:demo && node demo/app",
     "test": "mocha -b --recursive"
