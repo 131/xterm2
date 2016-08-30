@@ -14,8 +14,8 @@ It enables applications to provide fully featured terminals to their users and c
 
 ## Differences with main project
 * lighweight
-* ES6 based
-* UMD module design
+* ES6 based 
+* commonJS module design (so node / tests works without transpiling)
 * **sane API**
 * no 'build' system, this is just a library for your application to use
 
