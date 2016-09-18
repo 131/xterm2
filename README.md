@@ -20,6 +20,8 @@ It enables applications to provide fully featured terminals to their users and c
 * no 'build' system, this is just a library for your application to use
 
 
+* emit('reset') event on terminal reset
+
 ## Installation / usage
 
 ```

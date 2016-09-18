@@ -32,7 +32,9 @@ module.exports = function(Xterm) {
     };
 
     term.on('key', onKey);
-
+    term.once('reset', function() {
+      term.off("key", onKey);
+    });
   };
 
 };
